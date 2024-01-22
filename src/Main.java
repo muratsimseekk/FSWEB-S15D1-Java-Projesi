@@ -9,15 +9,16 @@ public class Main {
     public static void main(String[] args) {
 
 
-        System.out.println("0 - Cikis yap .");
-        System.out.println("1- Eleman ekle .");
-        System.out.println("2- Eleman cikart .");
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Seçiminizi yapınız: ");
-        int choice = scanner.nextInt();
+
+        int choice ;
 
         do {
-
+            System.out.println("0 - Cikis yap .");
+            System.out.println("1- Eleman ekle .");
+            System.out.println("2- Eleman cikart .");
+            Scanner scanner = new Scanner(System.in);
+            System.out.print("Seçiminizi yapınız: ");
+        choice = scanner.nextInt();
             switch (choice){
                 case 0:
                     System.out.println("Uygulamadan cikis yapiliyor ...");
@@ -29,6 +30,7 @@ public class Main {
                     break;
                 case 2:
                     removeItems();
+                    printSorted();
                     break;
             }
 
@@ -55,6 +57,7 @@ public class Main {
 
         }
         Collections.sort(groceryList);
+
 
     }
     public static void removeItems (){
